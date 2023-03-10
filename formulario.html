@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario    </title>
+    <style>
+        #vnombre{
+            color: red;
+        }
+        #vapellido{
+            color: red;
+        }
+        #vmail{
+            color: red;
+        }
+        #vpin{
+            color: red;
+        }
+        #vrpin{
+            color: red;
+        }
+
+        #vcond{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<script src=formulario.js></script>
+    <h1>Formulario examen</h1>
+    <label for="nombre">Nombre: </label><input type="text" id="nombre" placeholder="Nombre"><p id="vnombre"></p>
+    <label for="apellido">Apellidos: </label><input type="text" id="apellido" placeholder="Apellido"><p id="vapellido"></p>
+    <label for="mail">Correo electrónico: </label><input type="text" id="mail" placeholder="Email"><p id="vmail"></p>
+    <label for="pin">PIN: </label><input type="password" id="pin" placeholder="PIN"><p id="vpin"></p>
+    <label for="rpin">Repetir PIN: </label><input type="password" id="rpin" placeholder="PIN"><p id="vrpin"></p>
+    <input type="checkbox" id="cond"><label for="cond"> Acepto condiciones de uso</label><p id="vcond"></p>
+    <button onclick="validar()">Validar</button>
+</body>
+</html>
