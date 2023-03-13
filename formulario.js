@@ -6,7 +6,7 @@ function validar() {
     var rpin = document.getElementById("rpin").value;
     var cond = document.getElementById('cond');
     var validmail =/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
-
+    var dig=/^[0-9]+$/;
 
     if (nombre=="") {
         document.getElementById("vnombre").innerHTML= "Este campo es obligatorio";
@@ -33,8 +33,10 @@ function validar() {
     } else {
         if (pin.length<8){
             document.getElementById("vpin").innerHTML= "Las contraseñas deben tener mínimo 8 dígitos";
-        } else {
-            document.getElementById("vpin").innerHTML= "";
+        } else { if (dig.test(pin)) {
+                    document.getElementById("vpin").innerHTML= "";
+        } else {  document.getElementById("vpin").innerHTML= "Este campo solo admite dígitos";
+            }
         }
     }
 
